@@ -26,7 +26,7 @@
     </authorgroup>
   </head>
 
-  <sect1>
+  <section>
     <title>Introduction</title>
 
     <para>
@@ -95,9 +95,9 @@
       let racoon take care of the security associations.
     </para>
     
-  </sect1>
+  </section>
 
-  <sect1 id="ipsec-slackware">
+  <section id="ipsec-slackware">
     <title>The state of IPsec in Slackware</title>
 
     <para>
@@ -143,9 +143,9 @@ CONFIG_INET_IPCOMP=m
       The next section describes how to install the KAME IPsec tools.
     </para>
 
-  </sect1>
+  </section>
 
-  <sect1 id="ipsec-install-ipsec-tools">
+  <section id="ipsec-install-ipsec-tools">
     <title>Installing the KAME IPsec tools</title>
 
     <para>
@@ -154,7 +154,7 @@ CONFIG_INET_IPCOMP=m
       this article.
     </para>
 
-    <sect2 id="ipsec-install-ipsec-tools-manual">
+    <section id="ipsec-install-ipsec-tools-manual">
       <title>Manually compiling the IPsec tools</title>
 
       <para>
@@ -207,9 +207,9 @@ CONFIG_INET_IPCOMP=m
 	</listitem>
       </itemizedlist>
       
-    </sect2>
+    </section>
 
-    <sect2 id="ipsec-install-ipsec-tools-slackbuild">
+    <section id="ipsec-install-ipsec-tools-slackbuild">
       <title>Automatically compiling the IPsec tools</title>
 
       <para>
@@ -243,11 +243,11 @@ CONFIG_INET_IPCOMP=m
 	script.
       </para>
       
-    </sect2>
+    </section>
 
-  </sect1>
+  </section>
 
-  <sect1 id="ipsec-spd">
+  <section id="ipsec-spd">
     <title>Setting up security policies</title>
 
     <para>
@@ -434,9 +434,9 @@ fi
       read the <command>setkey</command>(8) manual page.
     </para>
 	
-  </sect1>
+  </section>
   
-  <sect1 id="ipsec-racoon">
+  <section id="ipsec-racoon">
     <title>Setting up racoon</title>
 
     <para>
@@ -543,7 +543,7 @@ sainfo anonymous
 # <command>chmod a+x /etc/rc.d/rc.racoon</command>
     </screen>
 
-  </sect1>
+  </section>
 
   <bibliography>
     <biblioentry>

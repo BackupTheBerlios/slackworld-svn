@@ -21,7 +21,7 @@
 -->
   </head>
 
-  <sect1>
+  <section>
     <para>
       After a month of hard work the first issue of <emphasis>The Slack
       World</emphasis> is ready. This project was started by Mickhail
@@ -80,6 +80,6 @@ Daniel de Kok
 Mickhail Zotov
     </literallayout>
 
-  </sect1>
+  </section>
 
 </webpage>

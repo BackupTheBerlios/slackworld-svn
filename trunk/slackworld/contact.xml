@@ -8,13 +8,11 @@
     <title>Contact information</title>
   </head>
 
-  <sect1>
-
+  <section>
     <para>
       You can contact us by sending an e-mail to
       <ulink url="mailto:a@b.c">a@b.c</ulink>
     </para>
-
-  </sect1>
+  </section>
 
 </webpage>

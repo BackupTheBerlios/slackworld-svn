@@ -16,7 +16,7 @@
     </authorgroup>
   </head>
 
-  <sect1>
+  <section>
     <title>Introduction</title>
 
     <para>
@@ -46,9 +46,9 @@
       arrows, but I think it is certainly possible to manage to survive
       without.
     </para>
-  </sect1>
+  </section>
 
-  <sect1>
+  <section>
     <title>Keyboard characteristics</title>
 
     <para>
@@ -116,9 +116,9 @@
       once.
     </para>
 
-  </sect1>
+  </section>
 
-  <sect1>
+  <section>
     <title>Configuring the keyboard</title>
 
     <para>
@@ -136,9 +136,9 @@
 input: USB HID v1.00 Keyboard [Chicony  PFU-65 USB Keyboard] on usb-0000:00:10.0-2.1
     </screen>
 
-  </sect1>
+  </section>
 
-  <sect1>
+  <section>
     <title>How it feels</title>
 
     <para>
@@ -170,9 +170,9 @@ input: USB HID v1.00 Keyboard [Chicony  PFU-65 USB Keyboard] on usb-0000:00:10.0
       the diamond key.
     </para>
 
-  </sect1>
+  </section>
 
-  <sect1>
+  <section>
     <title>Conclusion</title>
     
     <para>
@@ -196,6 +196,6 @@ input: USB HID v1.00 Keyboard [Chicony  PFU-65 USB Keyboard] on usb-0000:00:10.0
       of the keyboard, but with the price tags of the other versions,
       I guess nobody has a spare for me ;).
     </para>
-  </sect1>
+  </section>
 
 </webpage>

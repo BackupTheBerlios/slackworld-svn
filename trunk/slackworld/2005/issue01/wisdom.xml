@@ -22,7 +22,7 @@
     possible.
   </para>
 
-  <sect1>
+  <section>
     <title>Defragmentation of a hard drive</title>
 
     <blockquote>
@@ -175,6 +175,6 @@ single-user system.
       <ulink url="http://groups-beta.google.com/group/alt.os.linux.slackware/browse_thread/thread/7b4956aa15205ada?tvc=2">here</ulink>.
     </para>
 
-  </sect1>
+  </section>
 
 </webpage>

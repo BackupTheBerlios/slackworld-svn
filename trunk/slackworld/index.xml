@@ -8,7 +8,7 @@
     <title>Welcome</title>
   </head>
 
-  <sect1>
+  <section>
     <title>Introduction</title>
 
     <para>
@@ -49,9 +49,9 @@
     </para>
 -->
 
-  </sect1>
+  </section>
 
-  <sect1>
+  <section>
     <title>Contributing</title>
 
     <para>
@@ -59,6 +59,6 @@
       you can contribute to The Slack World, don't hesitate to 
       <ulink url="contact.html">contact us</ulink>.
     </para>
-  </sect1>
+  </section>
 
 </webpage>

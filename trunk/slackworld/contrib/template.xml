@@ -16,12 +16,12 @@
     </authorgroup>
   </head>
 
-  <sect1>
+  <section>
     <title>Introduction</title>
 
     <para>
       Some text.
     </para>
-  </sect1>
+  </section>
 
 </webpage>
