@@ -100,7 +100,7 @@
                 <xsl:text>menu</xsl:text>
               </xsl:attribute>
               <xsl:attribute name="href">
-                <xsl:call-template name="homeuri"/>
+                <xsl:text>/</xsl:text>
               </xsl:attribute>
               <xsl:attribute name="title">
                 <xsl:text>Home of The Slack World</xsl:text>
