@@ -1,7 +1,8 @@
-website: editorial.html ipsec.html hhkb.html wisdom.html letters.html index.html 
+website: editorial.html news.html ipsec.html hhkb.html wisdom.html letters.html index.html 
 
 index.html: index.xml
 editorial.html: editorial.xml
+news.html: news.xml
 ipsec.html: ipsec.xml
 hhkb.html: hhkb.xml
 wisdom.html: wisdom.xml
@@ -11,5 +12,5 @@ distclean: clean
 	rm -f autolayout.xml depends.tabular
 
 clean:
-	rm -f editorial.html ipsec.html hhkb.html wisdom.html letters.html index.html 
+	rm -f editorial.html news.html ipsec.html hhkb.html wisdom.html letters.html index.html 
 

@@ -9,6 +9,7 @@
 
   <toc page="index.xml">
     <tocentry page="editorial.xml" filename="editorial.html"/>
+    <tocentry page="news.xml" filename="news.html"/>
     <tocentry page="ipsec.xml" filename="ipsec.html"/>
     <tocentry page="hhkb.xml" filename="hhkb.html"/>
     <tocentry page="wisdom.xml" filename="wisdom.html"/>

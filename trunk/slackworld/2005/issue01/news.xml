@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd" []>
+
+<webpage id="2005-issue01-slacknews">
+  <head>
+    <title>SlackNews</title>
+
+    <editor>
+      <firstname>Daniel</firstname>
+      <surname>de Kok</surname>
+    </editor>
+  </head>
+
+  <section>
+    <title>Introduction</title>
+
+    <para>
+      This montly section gives a brief overview of Slackware-related
+      news.
+    </para>
+  </section>
+
+  <section>
+    <title>GNOME dropped from Slackware-Current</title>
+
+    <para>
+      After a long period of consideration GNOME is dropped in
+      Slackware-Current. From the
+      <ulink url="http://www.slackware.com/changelog/current.php?cpu=i386">ChangeLog</ulink>:
+    </para>
+
+    <blockquote>
+      <literallayout>
+gnome/*: Removed from -current, and turned over to community support and
+   distribution. I'm not going to rehash all the reasons behind this, but it's
+   been under consideration for more than four years.
+      </literallayout>
+    </blockquote>
+
+    <para>
+      This should come as no big suprise, since this has been announced
+      pretty long ago. A widely circulated 
+      <ulink url="http://www.dropline.net/forums/viewtopic.php?t=3430">e-mail</ulink> 
+      from Patrick Volkerding that was originally posted on the Dropline
+      GNOME forums already indicated that the removal of GNOME was under
+      consideration:
+    </para>
+
+    <blockquote>
+      <literallayout>
+Anyway, suffice to say the jury is still out. Since GNOME 1.4 I've felt
+that GNOME is going in a direction that doesn't fit well with Slackware's
+goals, and for at least as long I've considered removing it completely and
+taking whatever flames I get for that decision. Right now, I think
+removing it would be the best thing for Slackware as it's become a
+maintainance nightmare (unlike nearly every other ./configure'ed source,
+GNOME doesn't build into packages easily with DESTDIR).
+
+Not what you wanted to hear, I'm sure, but I do believe it would be best
+to let Dropline produce Slackware's GNOME and quit wasting my own time
+with it. Probably 1/3 of developement time here is used maintaining
+GNOME, and *most* of the bug reports I get have something to do with GNOME
+(and aren't bugs I caused, or can fix). KDE, on the other hand, tends to
+build using the existing build scripts with no changes at all. I can
+start the build and come back to finished packages in a few hours. A
+GNOME update usually takes at least a week of manual labor, and another
+week of cleaning up broken things. It's been a long time (like I said,
+around GNOME 1.4), since I've felt the effort was worth the return. 
+      </literallayout>
+    </blockquote>
+
+    <para>
+      This does not mean that GNOME users are left out in the cold.
+      Both the <ulink url="http://gsb.sourceforge.net/">GNOME.SlackBuild</ulink>
+      and the <ulink url="http://gware.sourceforge.net/">GWARE</ulink>
+      projects provide GNOME 2.10 for Slackware Linux. Both projects
+      that provide a non-intrusive version of GNOME, which means that
+      replacement of official Slackware Linux packages is avoided. The
+      better known <ulink url="http://www.dropline.net/gnome/">Dropline
+      GNOME</ulink> project also provides GNOME 2.10 packages for Slackware
+      Linux. But Dropline is highly intrusive, and amongst others add PAM
+      and their own X.org builds. Time will tell what (if any) will become 
+      the defacto GNOME for Slackware Linux.
+    </para>
+
+  </section>
+
+  <section>
+    <title>KDE in Slackware-Current upgraded to 3.4.0</title>
+
+    <para>
+      As usual, new KDE packages are available after the new release
+      of KDE. New features in KDE 3.4 include:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+          A text to speech system, with support built into Konqueror,
+          Kate, KPDF and KSayIt. Besides that text to speech synthesis
+          is integrated with the desktop.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          KPDF now has support for copying images and text from PDF
+          files.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Support for various groupware servers, including eGroupware,
+          Groupwise, Kolab, OpenGroupware.org and SLOX, in Kontact.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Support for Novel Groupwise and Lotus Sametime in Kopete.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Improved standards support in the Konqueror web browser.
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      Many other features are listed in the 
+      <ulink url="http://www.kde.org/announcements/announce-3.4.php">release
+      notes</ulink>. Proponents of new Linux desktop technologies might
+      want to add that KDE now has DBUS/HAL support for keeping dynamic
+      device icons in <filename>media:/</filename>. I hope your editor
+      does not get flamed to much for saying this, but I can only sincerily
+      hope that integration of D-BUS/HAL in Slackware is at least hold off 
+      for a while. First of all because it is highly dependent on Linux
+      2.6, and besides that it would probably be better to get it
+      stabilized.
+    </para>
+  </section>
+
+  <section>
+    <title>Dead trees version of the not-so-unofficial Slack Book available</title>
+
+    <para>
+      Many Slackware Linux fans were probably be relieved to hear that
+      the <ulink url="http://www.slackbook.org/">The Unofficial Revised
+      Slackware Book Project</ulink> is now
+      <ulink url="http://store.slackware.com/cgi-bin/store/slackbook">avialable</ulink>
+      through the <ulink url="http://store.slackware.com/">Slackware Store</ulink>.
+      Now we can now finally go out, and give our newbie friends a
+      good introducary work to Slackware Linux. Thanks go out to
+      Alan Hicks and his
+      <ulink url="http://www.slackbook.org/contributors.html">team</ulink>
+      for their great work!
+    </para>
+  </section>
+
+</webpage>
