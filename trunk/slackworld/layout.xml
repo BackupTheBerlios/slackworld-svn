@@ -18,6 +18,7 @@
         <tocentry page="2005/issue01/letters.xml" filename="letters.html"/>
       </tocentry>
     </tocentry>
+    <tocentry page="license.xml" filename="license.html"/>
     <tocentry page="links.xml" filename="links.html"/>
   </toc>
 </layout>
