@@ -41,6 +41,9 @@
 
 <!-- Support editor tags, this is not available in plain DocBook/Website -->
 
+<xsl:template match="head/editor" mode="head.mode">
+</xsl:template>
+
 <xsl:template match="head/editor">
   <p>
     <b>Editor:</b> <xsl:apply-templates/>
