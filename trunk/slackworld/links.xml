@@ -8,9 +8,15 @@
   </head>
 
   <section>
-    <para>This collection of links is in no way comprehensive
-    (i.e., it's slack :-)) but is provided in the hope that it may
-    be useful for those new to Slackware.</para>
+    <title>Introduction</title>
+
+    <para>
+      This collection of links is in no way comprehensive
+      (i.e., it's slack :-)) but is provided in the hope that it may
+      be useful for those new to Slackware. Many of the sites given below
+      maintain their own lists of links to resources related to Slackware
+      and Linux in general.
+    </para>
   </section>
 
   <section>
@@ -59,14 +65,21 @@
       </listitem>
       <listitem>
         <para>
-          <ulink url="http://slackbook.lizella.net/">The Unofficial
-          Revised Slackware Book Project</ulink>
+          <ulink url="http://slackbook.org/">The Unofficial
+          Revised Slackware Book Project</ulink> - maintained by
+          Alan Hicks.
         </para>
       </listitem>
       <listitem>
         <para>
           <ulink url="http://www.slackware.com/faq/">Slackware
           Linux FAQ</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.linuxpackages.net/faq/">Slackware FAQ</ulink>
+          at LinuxPackages
         </para>
       </listitem>
       <listitem>
@@ -83,14 +96,20 @@
       </listitem>
       <listitem>
         <para>
-          <ulink url="http://www.linuxquestions.org/questions/forumdisplay.php?s=497c2a0ae8a0557560d66cd9a673a814&amp;forumid=14">
-          Slackware at LinuxQuestions.org</ulink>
+          <ulink url="http://druid.mine.nu:8880/index.php">
+          Slackware Documentation Project</ulink>
         </para>
       </listitem>
       <listitem>
         <para>
-          <ulink url="http://druid.mine.nu:8880/index.php">
-          Slackware Documentation Project</ulink>
+          <ulink url="http://www.linuxpackages.net/howto.php">Slackware HOWTOs</ulink>
+          at LinuxPackages
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.slackersbible.org/">Slackware Handbook</ulink>
+          - a project by Mad Penguin
         </para>
       </listitem>
     </itemizedlist>
@@ -178,7 +197,8 @@
       <listitem>
         <para>
         <ulink url="http://gsb.sourceforge.net/">
-        GNOME.SlackBuild</ulink> - a GNOME distribution for
+        GNOME.SlackBuild</ulink> - a 
+        <ulink url="http://www.gnome.org">GNOME</ulink> distribution for
         Slackware</para>
       </listitem>
       <listitem>
@@ -218,8 +238,9 @@
       <listitem>
         <para>
         <ulink url="http://markhill.me.uk/2004/10/comparepkg/comparepkg.txt">
-        Comparepkg</ulink> - a Perl script by Mark Hill for checking
-        permissions/ownership of files</para>
+        Comparepkg</ulink> - a <ulink url="http://www.perl.org">Perl</ulink>
+        script by Mark Hill for checking permissions/ownership of files  
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -227,6 +248,14 @@
         Whichpkg</ulink> - a script for answering the question
         &amp;quot;Which package(s) provide the file
         XXX?&amp;quot;</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://slackcurrent.sourceforge.net/">Slackcurrent</ulink>
+        a <ulink url="http://www.python.org/">Python</ulink> script to check
+        for new packages in the
+        <ulink url="http://www.slackware.com/changelog/current.php?cpu=i386">-current</ulink> tree
+        </para>
       </listitem>
       <listitem>
         <para>
@@ -324,7 +353,7 @@
       <listitem>
         <para>
           <ulink url="http://www.linuxquestions.org/questions/forumdisplay.php?forumid=14">
-          Slackware forum at linuxquestion.org</ulink>
+          Slackware forum</ulink> at linuxquestion.org
         </para>
       </listitem>
       <listitem>
@@ -402,6 +431,8 @@
 -->
   <!-- Long dash: &amp;#8212; -->
   <section>
+    <title>Footnote</title>
+
     <para>Please, do not hesitate to let us 
     <ulink url="mailto:editors at slackworld dot net">
     know</ulink> about Slackware-related resources that can be
