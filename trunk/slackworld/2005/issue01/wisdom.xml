@@ -7,12 +7,10 @@
   <head>
     <title>Slack Wisdom</title>
 
-    <editorgroup>
-      <editor>
-        <firstname>Mikhail</firstname>
-        <surname>Zotov</surname>
-      </editor>
-    </editorgroup>
+    <editor>
+      <firstname>Mikhail</firstname>
+      <surname>Zotov</surname>
+    </editor>
   </head>
 
   <para>

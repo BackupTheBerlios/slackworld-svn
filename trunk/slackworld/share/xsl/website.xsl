@@ -41,10 +41,7 @@
 
 <!-- Support editor tags, this is not available in plain DocBook/Website -->
 
-<xsl:template match="head/editorgroup" mode="head.mode">
-</xsl:template>
-
-<xsl:template match="head/editorgroup">
+<xsl:template match="head/editor">
   <p>
     <b>Editor:</b> <xsl:apply-templates/>
   </p>
@@ -120,7 +117,7 @@
             <xsl:apply-templates select="./head/title" mode="title.mode"/>
   	    <xsl:apply-templates select="./head/subtitle" mode="title.mode"/>
 	    <xsl:apply-templates select="./head/author"/>
-            <xsl:apply-templates select="./head/editorgroup"/>
+            <xsl:apply-templates select="./head/editor"/>
             <xsl:apply-templates select="child::*[name(.)!='webpage']"/>
 
             <p align="right">
