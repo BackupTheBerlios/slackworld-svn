@@ -8,12 +8,10 @@
     <title>Happy Hacking Keyboard Lite 2</title>
     <subtitle>UNIX keyboards done the right way</subtitle>
 
-    <authorgroup>
-      <author>
-        <firstname>Daniel</firstname>
-        <surname>de Kok</surname>
-      </author>
-    </authorgroup>
+    <author>
+      <firstname>Daniel</firstname>
+      <surname>de Kok</surname>
+    </author>
   </head>
 
   <section>

@@ -18,12 +18,10 @@
     <title>Securing IP traffic with IPsec</title>
     <subtitle>Encrypting host to host communication with ESP</subtitle>
 
-    <authorgroup>
-      <author>
-        <firstname>Daniel</firstname>
-        <surname>de Kok</surname>
-      </author>
-    </authorgroup>
+    <author>
+      <firstname>Daniel</firstname>
+      <surname>de Kok</surname>
+    </author>
   </head>
 
   <section>

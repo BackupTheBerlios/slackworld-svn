@@ -8,12 +8,10 @@
     <title>Title</title>
     <subtitle>Subtitle</subtitle>
 
-    <authorgroup>
-      <author>
-        <firstname>First name author</firstname>
-        <surname>Sur name author</surname>
-      </author>
-    </authorgroup>
+    <author>
+      <firstname>First name author</firstname>
+      <surname>Sur name author</surname>
+    </author>
   </head>
 
   <section>

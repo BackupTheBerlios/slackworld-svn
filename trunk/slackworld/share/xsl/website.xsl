@@ -33,7 +33,7 @@
 
 <!-- Formatting of author information -->
 
-<xsl:template match="authorgroup">
+<xsl:template match="author">
   <p>
     <b>Author:</b> <xsl:apply-templates/>
   </p>
@@ -119,7 +119,7 @@
           <div id="content">
             <xsl:apply-templates select="./head/title" mode="title.mode"/>
   	    <xsl:apply-templates select="./head/subtitle" mode="title.mode"/>
-	    <xsl:apply-templates select="./head/authorgroup"/>
+	    <xsl:apply-templates select="./head/author"/>
             <xsl:apply-templates select="./head/editorgroup"/>
             <xsl:apply-templates select="child::*[name(.)!='webpage']"/>
 
