@@ -6,29 +6,73 @@
 <webpage id="2005-issue01-editorial">
   <head>
     <title>Editorial</title>
-
-<!--
-    <authorgroup>
-      <author>
-        <firstname>Mikhail</firstname>
-        <surname>Zotov</surname>
-      </author>
-      <author>
-        <firstname>Daniel</firstname>
-        <surname>de Kok</surname>
-      </author>
-    </authorgroup>
--->
   </head>
 
   <section>
+
     <para>
       After a month of hard work the first issue of <emphasis>The Slack
       World</emphasis> is ready. This project was started by Mickhail
       Zotov and Alan Hicks to provide a high quality monthly Slackware Linux 
       newsletter that provides in-depth articles and Slackware related
-      news coverage. Along the way Daniel de Kok also joined the project,
-      and worked on the XML framework.
+      news coverage. The project was first publicly announced on the
+      alt.os.linux.slackware newsgroup:
+    </para>
+
+    <blockquote>
+      <literallayout>
+Newsgroups: alt.os.linux.slackware
+From: Mikhail Zotov &lt;e-boogie blah@blah yandex . ru&gt;
+Date: Mon, 28 Feb 2005 21:32:34 +0300
+Local: Mon, Feb 28 2005 10:32 am
+Subject: New project: The Slack World
+
+Ladies and gentlemen, folks, fellow slackers,
+
+We are going to begin a new project (tentatively and very modestly
+called "The Slack World").  The main aim of the project is to fill
+a few gaps that we see in covering Slackware-related information by
+other resources.
+
+The project is geared towards both Slackware veterans and novices.
+Currently, we think about covering the following main topics/sections:
+
+* Feature pieces (aka Slackopaedia), i.e., articles written by experienced
+  users for experienced users and newbies and covering subjects that are
+  not widely known but useful (gnupg, apache, sendmail, mysql, backup scripts,
+  etc.)  This is to be a sort of mini-HOWTO section and may cover things
+  included with Slackware or things not included with Slackware.
+
+* Brief reviews of the changes in -current tree (aka Slack News).
+
+* The most insightful and information things mentioned in AOLS or
+  ##slackware or #slackware or elsewhere (aka Slack Wisdom).
+
+* Information about new or existing third party tools developed around
+  Slackware, including distributions based on Slack.
+
+* Possibly, other topics related to Slackware and Linux in general
+  (e.g., links to articles that may be of general interest).
+
+We intend to implement the project as a monthly newsletter backed by
+a no-frills website.
+
+We would very much like to hear your opinions, ideas, suggestions.
+We also invite volunteers to join the project.  Last but not least, we
+would very much like to receive your articles, tips, links, etc. as soon
+as the project is up and you like it. :-)
+
+Best regards,
+
+Alan Hicks (http://slackbook.lizella.net) and Mikhail Zotov
+(http://slackfire.narod.ru) 
+      </literallayout>
+    </blockquote>
+
+    <para>
+      Along the way Daniel de Kok also joined the project as an author
+      and editor, and worked on the XML framework. Unfortunately Alan
+      Hicks had to drop the project, due to other commitments.
     </para>
 
     <para>
