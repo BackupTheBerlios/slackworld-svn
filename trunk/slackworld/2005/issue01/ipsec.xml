@@ -250,7 +250,7 @@ CONFIG_INET_IPCOMP=m
       database (SPD) in the kernel with the <command>setkey</command>
       command. <command>setkey</command> can read security policies
       from a file, so it is a good idea to put the policies in a
-      file, for example <filename>/etc/ipsec.conf</filename>. Let's
+      file, for example <filename>/etc/setkey.conf</filename>. Let's
       get started by looking at an example:
     </para>
 
@@ -410,7 +410,7 @@ spdadd &host2ip; &host1ip; any -P out ipsec
     <para>
       After setting up some policies you can add them to the kernel security
       policies database with the <command>setkey -f</command> command, for
-      example: <command>setkey -f /etc/ipsec.conf</command>. If you want to
+      example: <command>setkey -f /etc/setkey.conf</command>. If you want to
       set up these policies automatically when a system boots, you can add
       something along these lines to <command>/etc/rc.d/rc.inet1</command>:
     </para>
@@ -521,7 +521,7 @@ sainfo anonymous
     </para>
 
     <screen>
-192.168.1.169	This is some secret key
+&host2ip;	This is some secret key
     </screen>
 
     <para>
@@ -593,6 +593,23 @@ listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
 17:27:50.241067 IP terrapin.taickim.net &gt; &host2ip;: ESP(spi=0x059950e8,seq=0x9)
 17:27:50.241221 IP &host2ip; &gt; terrapin.taickim.net: ESP(spi=0x0ddff7e7,seq=0x9)
     </screen>
+  </section>
+
+  <section>
+    <title>Links</title>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://www.ipsec-howto.org/">The official IPsec Howto for Linux</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.netbsd.org/Documentation/network/ipsec/">NetBSD IPsec FAQ</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
   </section>
 
   <bibliography>
