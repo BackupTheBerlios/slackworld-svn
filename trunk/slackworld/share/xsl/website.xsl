@@ -71,7 +71,10 @@
   <html>
     <xsl:apply-templates select="head" mode="head.mode"/>
     <xsl:apply-templates select="config" mode="head.mode"/>
-    <body class="website">
+    <body>
+      <xsl:attribute name="class">
+        <xsl:text>website</xsl:text>
+      </xsl:attribute>
       <xsl:call-template name="body.attributes"/>
 
       <div class="{name(.)}">
@@ -84,9 +87,18 @@
 
         <br/>
 
-        <div id="container">
-          <div id="menu">
-            <a class="menu">
+        <div>
+          <xsl:attribute name="id">
+            <xsl:text>container</xsl:text>
+          </xsl:attribute>
+          <div>
+            <xsl:attribute name="id">
+              <xsl:text>menu</xsl:text>
+            </xsl:attribute>
+            <a>
+              <xsl:attribute name="class">
+                <xsl:text>menu</xsl:text>
+              </xsl:attribute>
               <xsl:attribute name="href">
                 <xsl:call-template name="homeuri"/>
               </xsl:attribute>
@@ -95,7 +107,10 @@
               </xsl:attribute>
               <xsl:text>Home</xsl:text>
             </a>
-	    <a class="menu">
+	    <a>
+              <xsl:attribute name="class">
+                <xsl:text>menu</xsl:text>
+              </xsl:attribute>
 	      <xsl:attribute name="href">
 	        <xsl:text>index.html</xsl:text>
 	      </xsl:attribute>
@@ -104,7 +119,10 @@
 	      </xsl:attribute>
 	      <xsl:text>Toc</xsl:text>
 	    </a>
-            <a class="menu">
+            <a>
+              <xsl:attribute name="class">
+                <xsl:text>menu</xsl:text>
+              </xsl:attribute>
               <xsl:attribute name="href">
                 <xsl:call-template name="root-rel-path"/>
                 <xsl:text>contact.html</xsl:text>
@@ -116,22 +134,36 @@
             </a>
           </div>
 
-          <div id="content">
+          <div>
+            <xsl:attribute name="id">
+              <xsl:text>content</xsl:text>
+            </xsl:attribute>
             <xsl:apply-templates select="./head/title" mode="title.mode"/>
   	    <xsl:apply-templates select="./head/subtitle" mode="title.mode"/>
 	    <xsl:apply-templates select="./head/author"/>
             <xsl:apply-templates select="./head/editor"/>
             <xsl:apply-templates select="child::*[name(.)!='webpage']"/>
 
-            <p align="right">
-              <a href="#top">Back to top</a>
+            <p>
+              <xsl:attribute name="align">
+                <xsl:text>right</xsl:text>
+              </xsl:attribute>
+              <a>
+                <xsl:attribute name="href">
+                  <xsl:text>#top</xsl:text>
+                </xsl:attribute>
+                <xsl:text>Back to top</xsl:text>
+              </a>
             </p>
           </div>
         </div>
 
         <br/>
 
-        <div id="copyright">
+        <div>
+          <xsl:attribute name="id">
+            <xsl:text>copyright</xsl:text>
+          </xsl:attribute>
           The individual articles are copyrighted by their authors.
         </div>
 
