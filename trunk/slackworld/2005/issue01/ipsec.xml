@@ -537,6 +537,64 @@ sainfo anonymous
 
   </section>
 
+  <section>
+    <title>Testing your IPsec configuration</title>
+
+    <para>
+      After you have added the security policies to the security policy
+      database, and started Racoon, you can test your IPsec configuration.
+      For instance, you could ping the other host to start with. The
+      first time you ping the other host, this will fail:
+    </para>
+
+    <screen>
+$ <command>ping &host2ip;</command>
+connect: Resource temporarily unavailable
+    </screen>
+
+    <para>
+      The reason for this is that the security associations still
+      have to be set up. But the ICMP packet will trigger the key exchange.
+      ping will trigger the key exchange. You can see whether the exchange
+      was succesful or not by looking at the Racoon log messages in
+      <filename>/var/log/messages</filename>. A succesful key exhange
+      looks like this:
+    </para>
+
+    <screen>
+ Apr  4 17:14:58 terrapin racoon: INFO: IPsec-SA request for &host2ip; queued due to no phase1 found.
+ Apr  4 17:14:58 terrapin racoon: INFO: initiate new phase 1 negotiation: &host1ip;[500]&lt;=&gt;&host2ip;[500] 
+ Apr  4 17:14:58 terrapin racoon: INFO: begin Aggressive mode. 
+ Apr  4 17:14:58 terrapin racoon: INFO: received Vendor ID: DPD 
+ Apr  4 17:14:58 terrapin racoon: NOTIFY: couldn't find the proper pskey, try to get one by the peer's address.
+ Apr  4 17:14:58 terrapin racoon: INFO: ISAKMP-SA established &host1ip;[500]-&host2ip;[500] spi:58c4669f762abf10:60593eb9e3dd7406
+ Apr  4 17:14:59 terrapin racoon: INFO: initiate new phase 2 negotiation: &host1ip;[0]&lt;=&gt;&host2ip;[0] 
+ Apr  4 17:14:59 terrapin racoon: INFO: IPsec-SA established: ESP/Transport &host2ip;-&gt;host1ip; spi=232781799(0xddff7e7) 
+ Apr  4 17:14:59 terrapin racoon: INFO: IPsec-SA established: ESP/Transport &host1ip;-&gt;&host2ip; spi=93933800(0x59950e8) 
+    </screen>
+
+    <para>
+      After the key exchange, you
+      can verify that IPsec is set up correctly by analyzing the packets
+      that go in and out with <command>tcpdump</command>. tcpdump is
+      available in the <emphasis>n</emphasis> diskset. Suppose that
+      the outgoing connection to the other host goes through the
+      <emphasis>eth0</emphasis> interface, you can analyze the packats
+      that go though the <emphasis>eth0</emphasis> interface with
+      <command>tcpdump -i eth0</command>. If the outgoing packets are
+      encrypted with ESP, you can see this in the <command>tcpdump</command>
+      output. For example:
+    </para>
+
+    <screen>
+# <command>tcpdump -i eth0</command>
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on eth0, link-type EN10MB (Ethernet), capture size 96 bytes
+17:27:50.241067 IP terrapin.taickim.net &gt; &host2ip;: ESP(spi=0x059950e8,seq=0x9)
+17:27:50.241221 IP &host2ip; &gt; terrapin.taickim.net: ESP(spi=0x0ddff7e7,seq=0x9)
+    </screen>
+  </section>
+
   <bibliography>
     <biblioentry>
       <abbrev>RFC2402</abbrev>
