@@ -1,0 +1,58 @@
+body {
+  background-color: #eeeeee;
+  color: black;
+  margin: 0 3% 0 3%;
+  font-family: "Lucinda Sans Unicode", "Bitstream Vera Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+a.menu {
+  color: #eeeeee;
+  text-decoration: none;
+  padding: 5px;
+}
+
+a.menu:hover {
+  color: #ff9933;
+}
+
+img.banner {
+  margin-top: 10px;
+  background: white;
+  border: solid;
+  border-width: 1px;
+  padding: 1em 1em 1em 1em;
+}
+
+table {
+  font-size: 12px;
+}
+
+#container {
+  width: 95%;
+}
+
+#content {
+  background: white;
+  border: solid;
+  border-width: thin;
+  spacing: 0px;
+  padding: 0 1% 0 1%; 
+}
+
+#menu {
+  background: black;
+  color: white;
+  border: 1px solid #000000;
+  text-align: center;
+  spacing: 0px;
+  padding: 0px;
+}
+
+#copyright {
+  background: white;
+  border: solid;
+  border-width: thin;
+  width: 95%;
+  text-align: center; 
+}

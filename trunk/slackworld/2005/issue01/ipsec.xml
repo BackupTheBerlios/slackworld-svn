@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd" [
+    <!ENTITY host1ip "192.168.1.10">
+    <!ENTITY host2ip "192.168.1.11">
+  ]>
+
+<!--
+  XXX - Todo
+
+  - Modprobing of ESP.
+  - rc.inet1 stanzas.
+-->
+
+<webpage id="2005-issue01-ipsec">
+  <head>
+    <title>Securing IP traffic with IPsec</title>
+    <subtitle>Encrypting host to host communication with ESP</subtitle>
+
+    <authorgroup>
+      <author>
+        <firstname>Daniel</firstname>
+        <surname>de Kok</surname>
+      </author>
+    </authorgroup>
+  </head>
+
+  <sect1>
+    <title>Introduction</title>
+
+    <para>
+      This short article describes how to set up the IPsec functionality
+      in Linux 2.6 kernels, and how to use IPsec on Slackware Linux.
+      Be aware that this is not an in-depth guide of the IPsec tools,
+      please refer to the ipsec-tools documentation for more in-depth
+      information about the various parameters and options that can
+      be set.
+    </para>
+
+    <para>
+      <acronym>IPsec</acronym> is a collection of protocols that provide
+      authentication, encryption and compression. The IPsec protocol is
+      defined in several RFCs, and is a mandatory part of the new IETF
+      standard for IP traffic (<acronym>IPv6</acronym>). The following
+      protocols are defined in the IPsec standard:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+          <acronym>AH</acronym> (Authentication Header) provides authenticity
+          guarantee for transported packets. This is done by checksumming the
+          packages using a cryptographic algorithm. If the checksum is found to
+          be correct by the receiver, the receiver can be assured that the 
+          packet is not modified, and that the packet really originated from 
+          the reported sender (provided that the keys are only known by the 
+          sender and receiver). 
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <acronym>ESP</acronym> (Encapsulating Security Payload) is used to
+          encrypt packets. This makes the data of the packet confident, and
+          only readable by the host with the right decryption key.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <acronym>IPcomp</acronym> (IP payload compression) provides
+          compression before a packet is encrypted. This is useful, because
+          encrypted data generally compresses worse than unencrypted data.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <acronym>IKE</acronym> (Internet Key Exchange) provides the means to
+          negotiate keys in secrecy. Please note that IKE is optional, keys can
+          be configured manually.
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      In this article we will focus on using ESP to encrypt traffic, and
+      Racoon to do the initial key exchange. To use IPsec two types of
+      entries should be added: security associations (SAs) and security
+      policies (SPs). Security policies define IPsec policies for certain
+      connections. For example, you can specify to encrypt all the packages
+      to host <emphasis>&host2ip;</emphasis> with ESP. The kernel uses
+      security associations to decide how the specified policy is going
+      to be handled. For example, the encryption key and encryption
+      algorithm settings for a connection are specified in a security
+      association. We will manually set up the security policies, and
+      let racoon take care of the security associations.
+    </para>
+    
+  </sect1>
+
+  <sect1 id="ipsec-slackware">
+    <title>The state of IPsec in Slackware</title>
+
+    <para>
+      Slackware Linux has provided a Linux 2.6 kernel since Slackware Linux
+      10.0. The 2.6 kernel is available in Slackware 10.0 and 10.1
+      from the <filename>testing</filename> directory on CD2 of the
+      Slackware Linux CD sets, or any of the official Slackware mirrors.
+      The default Slackware 2.6 kernel has support for AH, ESP and
+      IPcomp in for both IPv4 and IPv6. If you are compiling a custom
+      kernel enable use at least the following options in your kernel
+      configuration:
+    </para>
+
+    <screen>
+CONFIG_INET_AH=y
+CONFIG_INET_ESP=y
+CONFIG_INET_IPCOMP=y
+    </screen>
+
+    <para>
+      Or you can compile support for IPsec protocols as a module:
+    </para>
+
+    <screen>
+CONFIG_INET_AH=m
+CONFIG_INET_ESP=m
+CONFIG_INET_IPCOMP=m
+    </screen>
+
+    <para>
+      When you choose to compile IPsec support as a module, make sure
+      that the required modules are loaded. For example, if you are going
+      to use ESP for IPv4 connections, load the <emphasis>esp4</emphasis>
+      module.
+    </para>
+
+    <para>
+      Besides having kernel support you need userland tools to set
+      up IPsec connections, and an IKE daemon for doing key exchanges.
+      For IPsec with Linux 2.6 the Linux port of the KAME IPsec tools
+      are the most widely used utilities.
+      The KAME IPsec tools are not included in Slackware Linux 10.0 or 10.1.
+      The next section describes how to install the KAME IPsec tools.
+    </para>
+
+  </sect1>
+
+  <sect1 id="ipsec-install-ipsec-tools">
+    <title>Installing the KAME IPsec tools</title>
+
+    <para>
+      This section is divided in two parts, you can install the IPsec
+      tools manually, or use the build script that is provided with
+      this article.
+    </para>
+
+    <sect2 id="ipsec-install-ipsec-tools-manual">
+      <title>Manually compiling the IPsec tools</title>
+
+      <para>
+        You can download the latest sources for the KAME IPsec tools
+	at <ulink url="http://ipsec-tools.sourceforge.net" />. After
+	downloading the sources you can compile the KAME IPsec tools
+        in the traditional way:
+      </para>
+
+      <screen>
+# <command>tar jxf ipsec-tools-x.y.z.tar.bz2</command>
+# <command>cd ipsec-tools-x.y.z</command>
+# <command>CFLAGS="-O2 -march=i486 -mcpu=i686" \
+  ./configure --prefix=/usr \
+              --sysconfdir=/etc \
+              --localstatedir=/var \
+              --enable-hybrid \
+              --enable-natt \
+              --enable-dpd \
+              --enable-frag \
+              i486-slackware-linux</command>
+# <command>make</command>
+# <command>make install</command>
+      </screen>
+
+      <para>
+        Replace <emphasis>x.y.z</emphasis> with the version of the
+	downloaded sources. The most notable flags that we specify
+	during the configuration of the sources are:
+      </para>
+
+      <itemizedlist>
+        <listitem>
+	  <para>
+	    <emphasis>--enable-dpd</emphasis>: enables
+	    dead peer detection (DPD). DPD is a method for detecting
+	    wether any of the hosts for which security associations
+	    are set up is unreachable. When this is the case the
+	    security associations to that host can be removed.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    <emphasis>--enable-natt</emphasis>: enables NAT traversal
+	    (NAT-T). Since NAT alters the IP headers, this causes
+	    problems for guaranteeing authenticity of a packet. NAT-T
+	    is a method that helps overcoming this problem. Configuring
+	    NAT-T is beyond the scope of this article.
+	  </para>
+	</listitem>
+      </itemizedlist>
+      
+    </sect2>
+
+    <sect2 id="ipsec-install-ipsec-tools-slackbuild">
+      <title>Automatically compiling the IPsec tools</title>
+
+      <para>
+        For this article SlackBuild script has been made available.
+	The SlackBuild script builds a package that includes the default
+	Racoon configuration that is used in this article.
+	at: <ulink url="http://www.slackworld.net/ipsec-tools-0.5-SlackBuild.tar.gz" />.
+      </para>
+
+      <para>
+        You can use this SlackBuild script to build an ipsec-tools package.
+	The procedure is quite simple, unpack the in the usual way:
+      </para>
+
+      <screen>
+# <command>tar zxf /path/to/ipsec-tools-0.5-SlackBuild.tar.gz</command>
+      </screen>
+
+      <para>
+        After unpacking the archive, you can drop the ipsec-tools 0.5
+	source tarball in the <filename>ipsec-tools</filename>
+	directory, and execute <command>sh ipsec-tools.SlackBuild</command>.
+	If the compilation was succesful, the package will be available as
+	<filename>/tmp/ipsec-tools-0.5-i386-1.tgz</filename>, which you
+	can install with <command>installpkg</command>.
+      </para>
+
+      <para>
+        If you are using a newer source tarball you should also update
+	the version number in the <filename>ipsec-tools.SlackBuild</filename>
+	script.
+      </para>
+      
+    </sect2>
+
+  </sect1>
+
+  <sect1 id="ipsec-spd">
+    <title>Setting up security policies</title>
+
+    <para>
+      At this point we can start to configure IPsec. The first thing
+      you will want to do is to set up some IPsec policies. These policies
+      define for what connections you would like to apply one of the
+      IPsec protocols. Policies can be added to the security policy
+      database (SPD) in the kernel with the <command>setkey</command>
+      command. <command>setkey</command> can read security policies
+      from a file, so it is a good idea to put the policies in a
+      file, for example <filename>/etc/ipsec.conf</filename>. Let's
+      get started by looking at an example:
+    </para>
+
+    <screen>
+#!/usr/sbin/setkey -f
+
+# Flush SPD
+spdflush;
+
+spdadd &host1ip; &host2ip; any -P out ipsec
+        esp/transport//require;
+
+spdadd &host2ip; &host1ip; any -P in ipsec
+        esp/transport//require;
+    </screen>
+
+    <para>
+      You should have no trouble recognizing the first line,
+      which sets <command>/usr/sbin/setkey</command> to be the interpreter
+      for this file (in case it is executed). The first thing we
+      do is flushing the security policy database, with the 
+      <command>spdflush</command> command. If you have set up any
+      other security policies that you want to keep you should
+      not flush the security policy database.
+    </para>
+
+    <para>
+      The next to commands add policies to the security policy database.
+      The following syntax is used for <command>spdadd</command> commands:
+    </para>
+
+    <screen>
+spdadd src_range dst_range upperspec policy ;
+    </screen>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+	  <emphasis>src_range</emphasis>: the source of the packet, this
+	  can be a network address range or a single IP address.
+	</para>
+      </listitem>
+      <listitem>
+        <para>
+	  <emphasis>dst_range</emphasis>: the destination of the packets,
+	  this can also be a network address range or a single IP address.
+	</para>
+      </listitem>
+      <listitem>
+        <para>
+	  <emphasis>upperspec</emphasis>: this is the upper layer protocol
+	  to be used. This is the protocol that is embedded in the new IPsec
+	  protocol packages. Any protocol from 
+	  <filename>/etc/protocol</filename> can be specified, but not all
+	  these protocols work with IPsec. Normally the protocol to be
+	  Normally either <emphasis>tcp</emphasis>, <emphasis>udp</emphasis>,
+	  <emphasis>icmp</emphasis> or <emphasis>any</emphasis> are specified.
+	  <emphasis>any</emphasis> stands for <quote>any protocol</quote>.
+	</para>
+      </listitem>
+      <listitem>
+        <para>
+	  <emphasis>policy</emphasis>: the policy to be applied to the
+	  packet that matches these criteria.
+	</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      We can now deduct that the first command sets up a security
+      policy for packets traveling from &host1ip; to &host2ip;
+      with any protocol, and the second command sets up the same
+      policy in reverse direction. The policy specification of the
+      spdadd command can have a few forms, in this example we will
+      only use this (simplified) form:
+    </para>
+
+    <screen>
+-P direction ipsec protocol/mode/src-dst/level
+    </screen>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+	  <emphasis>direction</emphasis>: this parameter specifies
+	  in what direction the packets are going. This can either
+	  be <emphasis>in</emphasis>, <emphasis>out</emphasis> or
+	  <emphasis>fwd</emphasis> (forward). Simply put, all packets
+	  arriving on the machine that you are configuring are in the
+	  <emphasis>in</emphasis> direction, packets that are sent
+	  out are in the <emphasis>out</emphasis> direction. We will
+	  not deal with <emphasis>fwd</emphasis> in this article.
+	</para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>protocol</emphasis>: the IPsec protocol to apply.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>mode</emphasis>: there are two modes for IPsec,
+	  <emphasis>transport</emphasis> and <emphasis>tunnel</emphasis>
+	  mode. Transport mode is used for handling packets that are
+	  sent between two machines, tunnel mode is used for packets
+	  that are sent from one network to another via two gateways.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>src-dst</emphasis>: the source and destination
+	  gateways, this is only used for tunnel mode.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>level</emphasis>: this specifies how this policy
+	  should be handled when there are, or are not, set up security
+	  associations. We will only use the <emphasis>require</emphasis>
+	  level, which will require a security association to be set up.
+	  This means that no packets that match the policy will be
+	  sent or received, unless the association is set up, guaranteeing
+	  that the packets are encrypted.
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      Now that the syntax of the policy is explained, it should be no
+      trouble to read the policies of the two example SPD commands. Both
+      policies specify that we require usage of ESP for packets that match
+      the criteria. The first command specifies a policy for outgoing
+      packets, the second command for incoming packets.
+    </para>
+
+    <para>
+      At this point policies are set up for packets sent out on &host1ip;
+      going to &host2ip;, and packets coming in from &host2ip; on
+      &host1ip;. On the machine with IP address &host2ip; we can use the
+      same policy with the <emphasis>in</emphasis> and <emphasis>out</emphasis>
+      parameters swapped:
+    </para>
+
+    <screen>
+#!/usr/sbin/setkey -f
+
+# Flush SPD
+spdflush;
+
+spdadd &host1ip; &host2ip; any -P in ipsec
+        esp/transport//require;
+
+spdadd &host2ip; &host1ip; any -P out ipsec
+        esp/transport//require;
+    </screen>
+
+    <para>
+      After setting up some policies you can add them to the kernel security
+      policies database with the <command>setkey -f</command> command, for
+      example: <command>setkey -f /etc/ipsec.conf</command>. If you want to
+      set up these policies automatically when a system boots, you can add
+      something along these lines to <command>/etc/rc.d/rc.inet1</command>:
+    </para>
+
+    <screen>
+if [ -x /usr/sbin/setkey ] &amp;&amp; [ -r /etc/setkey.conf ]; then
+  /usr/sbin/setkey -f /etc/setkey.conf
+fi
+    </screen>
+
+    <para>
+      For a more extensive explanation of the <command>setkey</command>,
+      read the <command>setkey</command>(8) manual page.
+    </para>
+	
+  </sect1>
+  
+  <sect1 id="ipsec-racoon">
+    <title>Setting up racoon</title>
+
+    <para>
+      When the kernel handles a packet for which a security policy
+      is set up, the kernel will look up the security associations
+      database (SAD) to see what parameters (e.g. encryption key)
+      should be used for handling the packet. We will use the racoon
+      daemon to set up security associations.
+    </para>
+
+    <para>
+      Racoon establishes a security association after a key exchange
+      that is done in two stages:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+	  <emphasis>Phase 1</emphasis>: during this phase the authenticity
+	  of another host is verified. When the verification is successful,
+	  a secure channel is set up between the two hosts, that is used
+	  to continue the key exchange. One of the commonly used methods
+	  of verifying the authenticity of another host is by using a
+	  pre-shared key that both hosts should know.
+	</para>
+      </listitem>
+      <listitem>
+        <para>
+	  <emphasis>Phase 2</emphasis>: during this step the security
+	  association for communication with the other host is set up.
+	  For ESP this involves choosing the encryption algorithm to be used,
+	  and generation of the keys that are used for encrypting packets.
+	</para>
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      An example racoon configuration is listed below. This configuration
+      is also used in the SlackBuild script that is linked from this
+      article. Configuration of racoon is extensively described in the
+      <command>racoon.conf</command>(5) manual page. In short, we define
+      two sections, one for phase 1 (<emphasis>remote</emphasis>) and
+      one for phase 2 (<emphasis>sainfo</emphasis>), that specify which
+      algorithms should be used for encryption and hashing. In addition,
+      we specify in the <emphasis>remote</emphasis> section that we
+      would like to use pre-shared keys to verify the authenticity of
+      the other host. As specified with the <emphasis>path
+      pre_shared_key</emphasis> option, the
+      <filename>/etc/racoon/psk.txt</filename> file will be used as
+      the pre-shared key database.
+    </para>
+
+    <screen>
+# search this file for pre_shared_key with various ID key.
+path pre_shared_key "/etc/racoon/psk.txt";
+
+# racoon will look for certificate file in the directory,
+# if the certificate/certificate request payload is received.
+path certificate "/etc/racoon/certs";
+
+remote anonymous
+{
+	exchange_mode aggressive, main;
+	my_identifier address;
+	proposal {
+		encryption_algorithm 3des;
+		hash_algorithm sha1;
+		authentication_method pre_shared_key;
+		dh_group 2;
+	}
+}
+
+sainfo anonymous
+{
+        pfs_group 2;
+        encryption_algorithm 3des, blowfish 448, rijndael;
+        authentication_algorithm hmac_sha1, hmac_md5;
+        compression_algorithm deflate;
+}
+    </screen>
+
+    <para>
+      The pre-shared key database has a very simple two-column format.
+      The first column specifies the host name or IP address, the second
+      column the shared key. Both columns are separated with whitespace.
+      When the key is prefixed with <emphasis>0x</emphasis>, the key is
+      interpreted as a hexadecimal number. For example, an entry in the
+      database could look like this (obviously, the key should be a
+      good random string of letters, numbers and other characters):
+    </para>
+
+    <screen>
+192.168.1.169	This is some secret key
+    </screen>
+
+    <para>
+      Racoon can now be started with the <command>racoon</command>
+      command. The SlackBuild script includes a startup script for racoon.
+      If you want to start racoon when the system boots, make the startup
+      script executable:
+    </para>
+
+    <screen>
+# <command>chmod a+x /etc/rc.d/rc.racoon</command>
+    </screen>
+
+  </sect1>
+
+  <bibliography>
+    <biblioentry>
+      <abbrev>RFC2402</abbrev>
+      <title>IP Authentication Header</title>
+      <authorgroup>
+        <author><firstname>S.</firstname><surname>Kent</surname></author>
+        <author><firstname>R.</firstname><surname>Atkinson</surname></author>
+      </authorgroup>
+      <pubdate>November 1998</pubdate>
+    </biblioentry>
+    <biblioentry>
+      <abbrev>RFC2406</abbrev>
+      <title>IP Encapsulating Security Payload (ESP)</title>
+      <authorgroup>
+        <author><firstname>S.</firstname><surname>Kent</surname></author>
+        <author><firstname>R.</firstname><surname>Atkinson</surname></author>
+      </authorgroup>
+      <pubdate>November 1998</pubdate>
+    </biblioentry>
+    <biblioentry>
+      <abbrev>RFC2409</abbrev>
+      <title>The Internet Key Exchange (IKE)</title>
+      <authorgroup>
+        <author><firstname>D.</firstname><surname>Harkins</surname></author>
+        <author><firstname>D.</firstname><surname>Carrel</surname></author>
+      </authorgroup>
+      <pubdate>November 1998</pubdate>
+    </biblioentry>
+  </bibliography>
+
+</webpage>

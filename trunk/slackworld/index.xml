@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN" 
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd">
+
+<webpage id="slackworld">
+
+  <head>
+    <title>Welcome</title>
+  </head>
+
+  <sect1>
+    <title>Introduction</title>
+
+    <para>
+      Welcome to the Slack World website! The Slack World is a monthly
+      <ulink url="http://www.slackware.com/">Slackware Linux</ulink> 
+      magazine. The main aim of the project is to fill a few gaps that
+      we see in covering Slackware-related information by other resources,
+      by providing in-depth articles and a summary of recent Slackware-related
+      news.
+    </para>
+
+    <para>
+      We are currently working on the first issue, please stay tuned!
+    </para>
+
+<!--
+    <para>
+      <emphasis role="bold">Current issue:</emphasis>
+      <ulink url="2005/issue01/index.html">Issue 1</ulink> (March 2005)
+    </para>
+
+    <para>
+      The current issue includes:
+    </para>
+
+    <itemizedlist>
+      <listitem><ulink url="2005/issue01/editorial.html">Editorial</ulink></listitem>
+      <listitem>Slack News</listitem>
+      <listitem><ulink url="2005/issue01/ipsec.html">Slackopedia: Securing IP traffic with ESP</ulink></listitem>
+      <listitem><ulink url="2005/issue01/hhkb.html">Slack Gear: Happy Hacking Keyboard Lite 2</ulink></listitem>
+      <listitem><ulink url="2005/issue01/wisdom.html">Slack Wisdom</ulink></listitem>
+      <listitem><ulink url="2005/issue01/letters.html">Letters</ulink></listitem>
+    </itemizedlist>
+
+    <para>
+      <emphasis role="bold">Older issues:</emphasis>
+      <ulink url="2005/">2005</ulink>
+    </para>
+  </sect1>
+-->
+
+  <sect1>
+    <title>Contributing</title>
+
+    <para>
+      We are in a constant look-out for skilled authors. If you think
+      you can contribute to The Slack World, don't hesitate to 
+      <ulink url="contact.html">contact us</ulink>.
+    </para>
+  </sect1>
+
+</webpage>

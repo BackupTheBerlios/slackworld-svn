@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd" []>
+
+<webpage id="2005-issue01-letters">
+  <head>
+    <title>Letters</title>
+  </head>
+
+  <sect1>
+    <para>
+      Since this is the first issue of The Slack World, our mail bag is
+      still empty. We would love to hear from you, look at our <ulink
+      url="../../contact.html">contact page</ulink> to see how you can
+      contact us. 
+    </para>
+  </sect1>
+
+</webpage>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd" []>
+
+<webpage id="2005-issue01-editorial">
+  <head>
+    <title>Editorial</title>
+
+<!--
+    <authorgroup>
+      <author>
+        <firstname>Mikhail</firstname>
+        <surname>Zotov</surname>
+      </author>
+      <author>
+        <firstname>Daniel</firstname>
+        <surname>de Kok</surname>
+      </author>
+    </authorgroup>
+-->
+  </head>
+
+  <sect1>
+    <para>
+      After a month of hard work the first issue of <emphasis>The Slack
+      World</emphasis> is ready. This project was started by Mickhail
+      Zotov and Alan Hicks to provide a high quality monthly Slackware Linux 
+      newsletter that provides in-depth articles and Slackware related
+      news coverage. Along the way Daniel de Kok also joined the project,
+      and worked on the XML framework.
+    </para>
+
+    <para>
+      We are aware of the fact that new Slackware-related
+      initiatives pop up everywhere every month, and that we will have to
+      prove ourselves to be a project that provides valuable information
+      and continuity. We ask you, as a reader, to judge our little
+      new project by the quality of the contents, and to provide
+      feedback. We just got started, and would like to know how we can
+      improve things
+    </para>
+
+    <para>
+      This first issue contains some sections that we plan to include
+      every month:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <emphasis role="bold">Editorial</emphasis>: what is a magazine
+	without an editorial? The editorial will comment on new
+	developments in the GNU/Linux world, or beg for new articles.
+      </listitem>
+      <listitem>
+        <emphasis role="bold">Slack News</emphasis>: the Slack News
+	section is a monthly summary of developments related to
+	Slackware Linux.
+      </listitem>
+      <listitem>
+        <emphasis role="bold">Slack Wisdom</emphasis>: Slack Wisdom
+	is a montly section that gathers Slack wisdom from various
+	newsgroups and mailinglists.
+      </listitem>
+      <listitem>
+        <emphasis role="bold">Slackopedia</emphasis>: The Slackopedia
+	section contains an in-depth article about some Slackware-related
+	subject.
+      </listitem>
+    </itemizedlist>
+
+    <para>
+      We hope that you will enjoy this first issue, have a good read!
+    </para>
+
+    <literallayout>
+Your editors,
+
+Daniel de Kok
+Mickhail Zotov
+    </literallayout>
+
+  </sect1>
+
+</webpage>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd" []>
+
+<webpage id="year-issue-articleid">
+  <head>
+    <title>Title</title>
+    <subtitle>Subtitle</subtitle>
+
+    <authorgroup>
+      <author>
+        <firstname>First name author</firstname>
+        <surname>Sur name author</surname>
+      </author>
+    </authorgroup>
+  </head>
+
+  <sect1>
+    <title>Introduction</title>
+
+    <para>
+      Some text.
+    </para>
+  </sect1>
+
+</webpage>

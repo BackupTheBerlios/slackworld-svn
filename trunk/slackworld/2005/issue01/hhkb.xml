@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd" []>
+
+<webpage id="2005-issue01-hhkb">
+  <head>
+    <title>Happy Hacking Keyboard Lite 2</title>
+    <subtitle>UNIX keyboards done the right way</subtitle>
+
+    <authorgroup>
+      <author>
+        <firstname>Daniel</firstname>
+        <surname>de Kok</surname>
+      </author>
+    </authorgroup>
+  </head>
+
+  <sect1>
+    <title>Introduction</title>
+
+    <para>
+      Every UNIX user who has ever touched more than 
+      <ulink url="http://kate.kde.org/">Kate</ulink> or
+      <ulink url="http://www.gnome.org/projects/gedit/">gedit</ulink> knows
+      that standard PC keyboards are plain wrong. First, of all the ESC
+      and CTRL keys are wronly placed. Besides that the average keyboard
+      is like a dinasaur when you only need a few letters for navigation.
+      One common technique to solve the first problem is to remap Caps
+      lock to CTRL, and the backtick key to ESC. But 
+      <ulink url="http://www.pfu.fujitsu.com/">PFU Limited</ulink> (a
+      Fujitsu company) has made a series of keyboards designed to solve
+      both problems, the 
+      <ulink url="http://www.pfu.fujitsu.com/en/hhkeyboard/">Happy Hacking
+      Keyboard</ulink>.
+    </para>
+
+    <para>
+      Since I am an avid elvis/vim/nvi user I have been watching development
+      around the Happy Hacking Keyboard (HHKB) for quite some time. Recently
+      I purchased a HHKB Lite 2 white USB for $59.95 from
+      <ulink url="http://www.linuxcentral.com">Linux Central</ulink>. I
+      chose for the Lite 2 version for two reasons: the other models are
+      to expensive for a student budget, and it has inverted T arrow
+      keys. Both the normal and Pro versions do not have inverted T
+      arrows, but I think it is certainly possible to manage to survive
+      without.
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>Keyboard characteristics</title>
+
+    <para>
+      The keyboard arrived in a somewhat cheap looking blue box, that
+      contains has a short and handy overview of the keyboard and
+      keyboard settings on the back. It was only until I opened the
+      box that I realized how small the keyboard actually is (quite
+      cute). The footprint of the HHKB is
+      <ulink url="http://www.pfu.fujitsu.com/en/hhkeyboard/leaflet/kbhiaku.html">compared</ulink>
+      to other keyboards on the website, but when you actually see
+      the keyboard, the cut-off seems really radical. It really cleans
+      up my desk.
+    </para>
+
+    <mediaobject id="hhkb-lite2">
+      <imageobject role="html">
+        <imagedata format="JPG" fileref="images/hhkb.jpg"/>
+      </imageobject>
+      <caption>Blowfish is guarding the keyboard</caption>
+    </mediaobject>
+
+    <para>
+      The keyboard has some really nice features, like two upstream
+      USB ports (of course, only the USB version), that are very handy
+      when you carry around USB mass storage alot. Besides that there
+      are some dip switches hidden behind a small plate that you
+      can pop off. The table listed below gives a short overview of
+      the dip switches.
+    </para>
+
+    <table>
+      <title>Happy Hacking Keyboard Lite 2 dip switches</title>
+      <tgroup cols="2">
+        <thead>
+	  <row>
+	    <entry>Dip switch</entry><entry>Description</entry>
+	  </row>
+	</thead>
+	<tbody>
+	  <row>
+	    <entry>1</entry>
+	    <entry>Enable/disable upstream USB ports</entry>
+	  </row>
+	  <row>
+	    <entry>2</entry>
+	    <entry>Not used</entry>
+	  </row>
+	  <row>
+	    <entry>3</entry>
+	    <entry>Delete is delete/Delete is backspace</entry>
+	  </row>
+	  <row>
+	    <entry>4</entry>
+	    <entry>Swapping of ALT and diamond keys</entry>
+	  </row>
+	</tbody>
+      </tgroup>
+    </table>
+
+    <para>
+      These dip switches are well-documented in the Japanese/English
+      leaflet that is included in the box. At first the switches looked
+      a bit easily breakable to me, but I managed to use them without
+      breaking anything, and I am probably only going to set the switches
+      once.
+    </para>
+
+  </sect1>
+
+  <sect1>
+    <title>Configuring the keyboard</title>
+
+    <para>
+      Configuring the keyboard involves two steps: setting the dip switches,
+      and setting up the software. I turned switch 3 to let the delete key
+      act as backspace, since I use backspace quite a lot when I am editing.
+    </para>
+
+    <para>
+      As I expected the software configuration turned out to be a no-brainer:
+      hotplugging + kernel USB magic automatically detected the keyboard:
+    </para>
+
+    <screen>
+input: USB HID v1.00 Keyboard [Chicony  PFU-65 USB Keyboard] on usb-0000:00:10.0-2.1
+    </screen>
+
+  </sect1>
+
+  <sect1>
+    <title>How it feels</title>
+
+    <para>
+      Immediately after plugging in the keyboard and typing some shell
+      commands it occured to me that the HHKB feels very natural in my
+      hands. It feels like the keyboard is well thought-out, and that
+      even normal letter keys feel better than an average keyboard. Having
+      the CTRL and ESC keys at another place did not involve much of
+      a relearning curve. I never used CTRL or ESC remappings, but
+      automatically started to use the CTRL and ESC correctly on the
+      HHKB.
+    </para>
+
+    <para>
+      The HHKB Lite 2 keys use a membrane switch that is depressed by a
+      rubber cap. This gives a minor click, but not as much as old
+      IBM keyboards. I personally severy dislike keyboards without a
+      click, because it gives good feedback when I type. My fingers
+      have got used to that over years. The click on this keyboard
+      is just about right. The 
+      <ulink url="http://www.pfu.fujitsu.com/en/hhkeyboard/leaflet/keyspec.html">key pressure</ulink> 
+      of the Lite 2 keyboard is about 55g, which feels pretty normal.
+    </para>
+
+    <para>
+      My primary critique about the HHKB is that the backtick key
+      is at an awkward place. Is use it quite a lot when I am
+      editing shell scripts. This can be worked around by remapping
+      the diamond key.
+    </para>
+
+  </sect1>
+
+  <sect1>
+    <title>Conclusion</title>
+    
+    <para>
+      Although keyboards are a matter of personal preference, I wholeheartedly
+      recommend the Happy Hacking Keyboard Lite 2 to anyone who uses
+      Slackware Linux in a UNIXy way. If you are not used to work
+      wth UNIX editors like vi, it may be a bit hard to get used
+      to the HHKB, since some keys are not directly available
+      (like the function keys). But if you are, this keyboard just
+      feels perfect, with everything you need available without much
+      hand movement. If you are still using a lot of garbage keys
+      this is a good opportunity to learn to het rid of them.
+    </para>
+
+    <para>
+      After using the HHKB for a short while you will see how
+      used you get to it when you use another keyboard. You will be
+      hitting the Caps lock key all the time. But there really is
+      no excuse not to cary a USB HHKB with you with its current
+      size. I would love to get my hands on a normal or Pro version
+      of the keyboard, but with the price tags of the other versions,
+      I guess nobody has a spare for me ;).
+    </para>
+  </sect1>
+
+</webpage>
