@@ -10,7 +10,7 @@
 
   <itemizedlist>
     <listitem><ulink url="editorial.html">Editorial</ulink></listitem>
-    <listitem>Slack News</listitem>
+    <listitem><ulink url="news.html">Slack News</ulink></listitem>
     <listitem><ulink url="ipsec.html">Slackopedia: Securing IP traffic with ESP</ulink></listitem>
     <listitem><ulink url="hhkb.html">Slack Gear: Happy Hacking Keyboard Lite 2</ulink></listitem>
     <listitem><ulink url="wisdom.html">Slack Wisdom</ulink></listitem>
