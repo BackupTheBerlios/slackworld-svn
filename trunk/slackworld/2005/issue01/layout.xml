@@ -14,5 +14,6 @@
     <tocentry page="hhkb.xml" filename="hhkb.html"/>
     <tocentry page="wisdom.xml" filename="wisdom.html"/>
     <tocentry page="letters.xml" filename="letters.html"/>
+    <tocentry page="acknowledgements.xml" filename="acknowledgements.html"/>
   </toc>
 </layout>

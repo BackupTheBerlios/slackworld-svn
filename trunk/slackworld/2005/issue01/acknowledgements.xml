@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+  "http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd" []>
+
+<webpage id="2005-issue01-acknowledgements">
+  <head>
+    <title>Acknowledgements</title>
+  </head>
+
+  <section>
+    <para>
+      We would like to thank the following people for their contributions
+      to this issue of The Slack World:
+    </para>
+
+    <itemizedlist>
+      <listitem>
+        <para>
+          Alan Hicks, for helping us getting this project started.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          Lew Pitcher, for the Slack wisdom he shared with us.
+        </para>
+      </listitem>
+    </itemizedlist>
+  </section>
+
+  <literallayout>
+Your editors,
+
+Daniel de Kok
+Mickhail Zotov
+  </literallayout>
+
+</webpage>
