@@ -17,7 +17,7 @@
     <title>Introduction</title>
 
     <para>
-      This montly section gives a brief overview of Slackware-related
+      This monthly section gives a brief overview of Slackware-related
       news.
     </para>
   </section>
@@ -40,7 +40,7 @@ gnome/*: Removed from -current, and turned over to community support and
     </blockquote>
 
     <para>
-      This should come as no big suprise, since this has been announced
+      This should come as no big surprise, since this has been announced
       pretty long ago. A widely circulated 
       <ulink url="http://www.dropline.net/forums/viewtopic.php?t=3430">e-mail</ulink> 
       from Patrick Volkerding that was originally posted on the Dropline
@@ -132,12 +132,9 @@ around GNOME 1.4), since I've felt the effort was worth the return.
       <ulink url="http://www.kde.org/announcements/announce-3.4.php">release
       notes</ulink>. Proponents of new Linux desktop technologies might
       want to add that KDE now has DBUS/HAL support for keeping dynamic
-      device icons in <filename>media:/</filename>. I hope your editor
-      does not get flamed to much for saying this, but I can only sincerily
-      hope that integration of D-BUS/HAL in Slackware is at least hold off 
-      for a while. First of all because it is highly dependent on Linux
-      2.6, and besides that it would probably be better to get it
-      stabilized.
+      device icons in <filename>media:/</filename>. It should be noted
+      that HAL is not included in Slackware Linux. At the moment HAL is
+      limited to Linux kernel 2.6, and pretty experimental. 
     </para>
   </section>
 
@@ -148,10 +145,10 @@ around GNOME 1.4), since I've felt the effort was worth the return.
       Many Slackware Linux fans were probably be relieved to hear that
       the <ulink url="http://www.slackbook.org/">The Unofficial Revised
       Slackware Book Project</ulink> is now
-      <ulink url="http://store.slackware.com/cgi-bin/store/slackbook">avialable</ulink>
+      <ulink url="http://store.slackware.com/cgi-bin/store/slackbook">available</ulink>
       through the <ulink url="http://store.slackware.com/">Slackware Store</ulink>.
       Now we can now finally go out, and give our newbie friends a
-      good introducary work to Slackware Linux. Thanks go out to
+      good introductory work to Slackware Linux. Thanks go out to
       Alan Hicks and his
       <ulink url="http://www.slackbook.org/contributors.html">team</ulink>
       for their great work!
