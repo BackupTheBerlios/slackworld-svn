@@ -6,13 +6,6 @@
     <!ENTITY host2ip "192.168.1.11">
   ]>
 
-<!--
-  XXX - Todo
-
-  - Modprobing of ESP.
-  - rc.inet1 stanzas.
--->
-
 <webpage id="2005-issue01-ipsec">
   <head>
     <title>Securing IP traffic with IPsec</title>
@@ -214,7 +207,8 @@ CONFIG_INET_IPCOMP=m
         For this article SlackBuild script has been made available.
 	The SlackBuild script builds a package that includes the default
 	Racoon configuration that is used in this article.
-	at: <ulink url="http://www.slackworld.net/ipsec-tools-0.5-SlackBuild.tar.gz" />.
+	You can download the SlackBuild script through this link:
+        <ulink url="files/ipsec-tools-slackbuild.tar.gz">ipsec-tools-slackbuild.tar.gz</ulink>.
       </para>
 
       <para>
@@ -223,7 +217,7 @@ CONFIG_INET_IPCOMP=m
       </para>
 
       <screen>
-# <command>tar zxf /path/to/ipsec-tools-0.5-SlackBuild.tar.gz</command>
+# <command>tar zxf /path/to/ipsec-tools-slackbuild.tar.gz</command>
       </screen>
 
       <para>
