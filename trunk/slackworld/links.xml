@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<!DOCTYPE webpage PUBLIC "-//Norman Walsh//DTD Website V2.4.1//EN"
+"http://docbook.sourceforge.net/release/website/2.4.1/schema/dtd/website.dtd">
+
+<webpage id="links">
+  <head>
+    <title>SlackLinks at The Slack World</title>
+  </head>
+
+  <sect1>
+    <para>This collection of links is in no way comprehensive
+    (i.e., it's slack :-)) but is provided in the hope that it may
+    be useful for those new to Slackware.</para>
+  </sect1>
+
+  <sect1>
+    <title>The origin of the slack world</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://www.slackware.com/">Slackware
+          Linux</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Slackware mirrors</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://www.abnormalpenguin.com/slackware-mirrors.php">
+          A list by abnormal penguin</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://alphageek.dyndns.org/linux/slackware-mirrors.shtml">
+          A list by alphageek</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Slackware docs</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+        <ulink url="http://www.slackware.com/book/">Slackware Linux
+        Essentials</ulink> - the official Slackware book</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.taickim.net/daniel/slackware-basics/">
+        Slackware Linux Basics</ulink> - a book by Daniel
+        de Kok</para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://slackbook.lizella.net/">The Unofficial
+          Revised Slackware Book Project</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.slackware.com/faq/">Slackware
+          Linux FAQ</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://wombat.san-francisco.ca.us/cgi-bin/fom?_recurse=1&amp;file=1">
+          alt.os.linux.slackware FAQ</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://linuxtipps.sourceforge.net/index.php">
+        SlackFAQ</ulink> - Inofficial Slackware Linux Support
+        Database</para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.linuxquestions.org/questions/forumdisplay.php?s=497c2a0ae8a0557560d66cd9a673a814&amp;forumid=14">
+          Slackware at LinuxQuestions.org</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://druid.mine.nu:8880/index.php">
+          Slackware Documentation Project</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Miscellaneous sites devoted or related to
+    Slackware</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+        <ulink url="http://userlocal.com/">userlocal.com</ulink> by
+        mRgOBLIN</para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.slackwaresupport.com/index.php?form_user_lang=enus">
+          slackwaresupport.com</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.slackware-advocacy.org/">Linux
+          Slackware-Advocacy</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.slackware.com/~david/zuul/">
+        zuul.slackware.com</ulink> by David Cantrell, Logan Johnson,
+        and Chris Lumens</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://uselesstree.org/live/tree/grow?node=The_Complete_Slacker">
+        The Complete Slacker</ulink> by Jeffrey Froman</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://markhill.me.uk/2004/10/slackware_introduction/">
+        Introduction to Slackware</ulink> by Mark Hill</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.edafe.org/slackware/index.html">
+        Slackware-related stuff</ulink> by Edafe Knabe</para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://alphageek.dyndns.org/linux/">
+          alphageek</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Additional packages for Slackware</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://www.linuxpackages.net/">
+          LinuxPackages</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://alphageek.dyndns.org/linux/slackware-packages.shtml">
+          alphageek</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://slackpack.tripleg.net.au/">SlackBuild
+          scripts for various applications</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Applications specifically written or configured for
+    Slackware</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+        <ulink url="http://gsb.sourceforge.net/">
+        GNOME.SlackBuild</ulink> - a GNOME distribution for
+        Slackware</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://gware.sourceforge.net/">GWARE</ulink> -
+        an &amp;quot;unitrusive&amp;quot; GNOME packaged for
+        Slackware</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.dropline.net/gnome/">Dropline
+        GNOME</ulink> - another GNOME desktop for Slackware</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://portpkg.berlios.de/">Portpkg</ulink> - a
+        Slackware Portsystem</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://swaret.sourceforge.net/index.php">
+        Swaret</ulink> - an updating tool for Slackware</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.audioslack.com/">AudioSlack</ulink> -
+        audio applications for Slackware</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.interlude.org.uk/unix/slackware/">
+        Slackware Linux stuff</ulink> by Stuart Winter</para>
+      </listitem>
+      <!--   <listitem>
+      <para><ulink url="http://asic-linux.com.mx/~izto/checkinstall/">Checkinstall</ulink> - a program to create and install a Slackware (rpm, Debian) compatible package</para>
+    </listitem> -->
+      <listitem>
+        <para>
+        <ulink url="http://markhill.me.uk/2004/10/comparepkg/comparepkg.txt">
+        Comparepkg</ulink> - a Perl script by Mark Hill for checking
+        permissions/ownership of files</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.no-dns-yet.org.uk/slackware/whichpkg/">
+        Whichpkg</ulink> - a script for answering the question
+        &amp;quot;Which package(s) provide the file
+        XXX?&amp;quot;</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://slackfire.berlios.de/">
+        SlackFire</ulink> - an iptables script (beta)</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Sites related to security of Slackware</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://www.slackware.org.br/~patrick/WORKGUS/">
+          GUS-BR Group</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://slacksec.info/">SlackSec Group</ulink>
+        </para>
+      </listitem>
+      <!--   <listitem>
+      <para><ulink url="http://slackware.com/~fizban/security.php">Slackware security (fizban)</ulink></para>
+    </listitem> -->
+      <listitem>
+        <para>
+          <ulink url="http://secure.slackware.fi/">
+          Secure.slackware.fi</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Articles devoted to managing and configuring
+    Slackware</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+        <ulink url="http://members.cox.net/laitcg/slack1.html">
+        Slackware Tips &amp;amp; Tricks</ulink> by Jack S.
+        Lai</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://www.osnews.com/story.php?news_id=3974">
+        Slackware Package Management</ulink> by Daniel de
+        Kok [OSNews, 2003-07-06]</para>
+      </listitem>
+      <!--   <listitem>
+      <para><ulink url="http://www.justlinux.com/nhf/Distribution_Specific/Slackware_Linux/Slackware__The_Quick_and_Dirty_Quide_to_Packages.html">The Quick and Dirty Quide to Packages</ulink> by X_console</para>
+    </listitem> -->
+      <listitem>
+        <para>
+        <ulink url="http://www.linuxgazette.com/node/613">
+        Installing Slackware and Making It Secure</ulink> by Cezary
+        M. Kruk [Linux Gazette, 06/01/2003]</para>
+      </listitem>
+      <listitem>
+        <para>The Stealth Desktop: 
+        <ulink url="http://www.ofb.biz/modules.php?name=News&amp;file=article&amp;sid=315">
+        Part I</ulink>, 
+        <ulink url="http://www.ofb.biz/modules.php?name=News&amp;file=article&amp;sid=317">
+        Part II</ulink>, and 
+        <ulink url="http://www.ofb.biz/modules.php?name=News&amp;file=article&amp;sid=327">
+        Part III</ulink> by Eduardo S&aacute;nchez
+        [OfB, July-September 2004]</para>
+      </listitem>
+      <!--   <listitem>
+      <para><ulink url="http://www.10east.com/~hlein/haqs/slack9.1_postinstall_hap">http://www.10east.com/~hlein/haqs/slack9.1_postinstall_hap</ulink></para>
+    </listitem> -->
+      <!--   <listitem>
+      <para><ulink url="http://www.izmiran.rssi.ru/~osin/slackware/">Slackware 9.1 Configuration</ulink></para>
+    </listitem> -->
+      <listitem>
+        <para>
+        <ulink url="http://staarage.ubishops.ca/PL5000/">Installing
+        Slackware on a Compaq Proliant 5000</ulink> - a story by
+        Todd A. Aiken</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Slackware newsgroup, forums, and mailing list</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://groups-beta.google.com/group/alt.os.linux.slackware/">
+          alt.os.linux.slackware</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.linuxquestions.org/questions/forumdisplay.php?forumid=14">
+          Slackware forum at linuxquestion.org</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="http://www.linuxpackages.net/forum/">
+          LinuxPackages Forum</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <ulink url="https://wombat.san-francisco.ca.us/mailman/listinfo/slackware-ot">
+          Slackware off-topic mailing list</ulink>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>The Man Patrick J. Volkerding</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <ulink url="http://www.slackware.com/~volkerdi/">Home
+          page</ulink>
+        </para>
+      </listitem>
+      <listitem>
+        <para>Interviews:</para>
+      </listitem>
+      <listitem>
+        <itemizedlist>
+          <listitem>
+            <para>
+            <ulink url="http://www.linuxjournal.com/article.php?sid=2750">
+            An Interview for Linux Journal</ulink> by Phil Hughes,
+            1994-04-01</para>
+          </listitem>
+          <listitem>
+            <para>
+            <ulink url="http://slashdot.org/interviews/00/03/17/1120205.shtml">
+            Replies from Slackware Founder Patrick
+            Volkerding</ulink> - Slashdot</para>
+          </listitem>
+          <listitem>
+            <para>
+            <ulink url="http://www.theage.com.au/articles/2002/10/04/1033538761935.html">
+            The Linux distribution that's always in the
+            black</ulink> by Sam Varghese, The Age, October 4
+            2002</para>
+          </listitem>
+        </itemizedlist>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <sect1>
+    <title>Miscellany</title>
+    <itemizedlist>
+      <listitem>
+        <para>
+        <ulink url="http://www.slackware.com/~msimons/slackware/grfx/">
+        Propaganda</ulink> - Slackware graphics and banners</para>
+      </listitem>
+      <listitem>
+        <para>
+        <ulink url="http://slackart.linuxpackages.net/index.php?">
+        Slackware Art</ulink> - Slackware art gallery at
+        LinuxPackages</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+
+  <!--
+ <dt><ulink url="http://slax.linux-live.org/">SLAX: Slackware based Live CD - index page</ulink></dt>
+-->
+  <!-- Long dash: &amp;#8212; -->
+  <sect1>
+    <para>Please, do not hesitate to let us 
+    <ulink url="mailto:editors at slackworld dot net">
+    know</ulink> about Slackware-related resources that can be
+    useful for the community. We will be glad to consider adding
+    them to the list.</para>
+  </sect1>
+</webpage>
