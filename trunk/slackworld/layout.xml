@@ -9,15 +9,7 @@
 
   <toc page="index.xml">
     <tocentry page="contact.xml" filename="contact.html"/>
-    <tocentry page="2005/index.xml" dir="2005">
-      <tocentry page="2005/issue01/index.xml" dir="issue01" filename="index.html">
-        <tocentry page="2005/issue01/editorial.xml" filename="editorial.html"/>
-        <tocentry page="2005/issue01/ipsec.xml" filename="ipsec.html"/>
-        <tocentry page="2005/issue01/hhkb.xml" filename="hhkb.html"/>
-        <tocentry page="2005/issue01/wisdom.xml" filename="wisdom.html"/>
-        <tocentry page="2005/issue01/letters.xml" filename="letters.html"/>
-      </tocentry>
-    </tocentry>
+    <tocentry page="2005/index.xml" dir="2005"/>
     <tocentry page="license.xml" filename="license.html"/>
     <tocentry page="links.xml" filename="links.html"/>
   </toc>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE layout PUBLIC "-//Norman Walsh//DTD Website Layout V2.5.0//EN"
+       "http://docbook.sourceforge.net/release/website/2.5.0/schema/dtd/layout.dtd">
+
+<layout>
+  <style src="../../share/css/normal.css" type="text/css"/>
+
+  <config param="footer" value="index.html" altval="Index"/>
+
+  <toc page="index.xml">
+    <tocentry page="editorial.xml" filename="editorial.html"/>
+    <tocentry page="ipsec.xml" filename="ipsec.html"/>
+    <tocentry page="hhkb.xml" filename="hhkb.html"/>
+    <tocentry page="wisdom.xml" filename="wisdom.html"/>
+    <tocentry page="letters.xml" filename="letters.html"/>
+  </toc>
+</layout>

@@ -1,14 +1,8 @@
-website: contact.html 2005/index.html 2005/issue01/index.html 2005/issue01/editorial.html 2005/issue01/ipsec.html 2005/issue01/hhkb.html 2005/issue01/wisdom.html 2005/issue01/letters.html license.html links.html index.html 
+website: contact.html 2005/index.html license.html links.html index.html 
 
 index.html: index.xml
 contact.html: contact.xml
 2005/index.html: 2005/index.xml
-2005/issue01/index.html: 2005/issue01/index.xml
-2005/issue01/editorial.html: 2005/issue01/editorial.xml
-2005/issue01/ipsec.html: 2005/issue01/ipsec.xml
-2005/issue01/hhkb.html: 2005/issue01/hhkb.xml
-2005/issue01/wisdom.html: 2005/issue01/wisdom.xml
-2005/issue01/letters.html: 2005/issue01/letters.xml
 license.html: license.xml
 links.html: links.xml
 
@@ -16,5 +10,5 @@ distclean: clean
 	rm -f autolayout.xml depends.tabular
 
 clean:
-	rm -f contact.html 2005/index.html 2005/issue01/index.html 2005/issue01/editorial.html 2005/issue01/ipsec.html 2005/issue01/hhkb.html 2005/issue01/wisdom.html 2005/issue01/letters.html license.html links.html index.html 
+	rm -f contact.html 2005/index.html license.html links.html index.html 
 
